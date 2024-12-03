@@ -1,10 +1,5 @@
-<<<<<<< Updated upstream
-import logo from './logo.svg';
-import './App.css';
-=======
 import React, { useState } from 'react';
 import './index.css';
->>>>>>> Stashed changes
 
 function App() {
   const [query, setQuery] = useState('');
@@ -159,94 +154,46 @@ function App() {
   };
 
   return (
-<<<<<<< Updated upstream
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-=======
-    <div className="outer-box">
-      <div className="inner-box">
-        <div className="logo">
-          <h1>Naomi & Chels Air</h1>
-          <p>Your Gateway to Seamless Air Travel</p>
-        </div>
+<div className="outer-box">
+  <div className="inner-box">
+    <div className="logo">
+      <h1>Naomi & Chels Air</h1>
+      <p>Your Gateway to Seamless Air Travel</p>
+    </div>
 
-        <nav className="navbar">
-          <h3><a href="#" target="_blank">Home</a></h3>
-          <h3><a href="#" target="_blank">Bookings</a></h3>
-          <h3><a href="#" target="_blank">Airports</a></h3>
-          <h3><a href="#" target="_blank">About Us</a></h3>
-          <h3><a href="#" target="_blank">Contact</a></h3>
-        </nav>
+    <nav className="navbar">
+      <h3><a href="#" target="_blank">Home</a></h3>
+      <h3><a href="#" target="_blank">Bookings</a></h3>
+      <h3><a href="#" target="_blank">Airports</a></h3>
+      <h3><a href="#" target="_blank">About Us</a></h3>
+      <h3><a href="#" target="_blank">Contact</a></h3>
+    </nav>
 
-        <div className="welcome">
-          <h1>Welcome, let's find your booking!</h1>
-          <p>Your one-stop solution for managing air travel data!</p>
-        </div>
+    <div className="welcome">
+      <h1>Welcome, let's find your booking!</h1>
+      <p>Your one-stop solution for managing air travel data!</p>
+    </div>
 
-        <div className="search-section">
-          <div className="search-bar">
-            <input
-              type="text"
-              placeholder="Search..."
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-            />
-            <button onClick={handleSearch}>Search</button>
-          </div>
-
-          {error && <p className="error-message">{error}</p>}
-          {results.length > 0 && (
-            <div className="search-results">
-              <h2>Search Results</h2>
-              <ul>
-                {results.map((item, index) => (
-                  <li key={index}>
-                    <strong>{item.name}</strong> – {JSON.stringify(item)}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-
-        {/* Add Buttons */}
-        <div className="add-buttons">
-          <button onClick={() => setShowModal('aircraft')}>Add an Aircraft</button>
-          <button onClick={() => setShowModal('airport')}>Add an Airport</button>
-          <button onClick={() => setShowModal('city')}>Add a City</button>
-          <button onClick={() => setShowModal('passenger')}>Add a Passenger</button>
-        </div>
-
-        {/* Modal */}
-        {showModal && (
-          <div className="modal">
-            <div className="modal-content">
-              <h2>Add {showModal}</h2>
-              <form>{renderFormFields()}</form>
-              <button onClick={handleAdd}>Submit</button>
-              <button onClick={() => setShowModal(null)}>Close</button>
-            </div>
-          </div>
-        )}
-
-        <footer className="footer">
-          <p>&copy; 2024 Naomi & Chels Air. All Rights Reserved.</p>
-        </footer>
+    <div className="search-section">
+      <div className="search-bar">
+        <input type="text" placeholder="Search..." />
+        <button>Search</button>
       </div>
->>>>>>> Stashed changes
+    </div>
+
+    <div className="add-buttons">
+      <button onClick={() => console.log('Add Aircraft clicked')}>Add an Aircraft</button>
+      <button onClick={() => console.log('Add Airport clicked')}>Add an Airport</button>
+      <button onClick={() => console.log('Add City clicked')}>Add a City</button>
+      <button onClick={() => console.log('Add Passenger clicked')}>Add a Passenger</button>
+    </div>
+
+    <footer className="footer">
+      <p>&copy; 2024 Naomi & Chels Air. All Rights Reserved.</p>
+    </footer>
+  </div>
+</div>
+
     </div>
   );
 }
